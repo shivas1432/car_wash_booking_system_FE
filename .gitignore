@@ -1,0 +1,99 @@
+# =============================================================================
+# SECURITY - API KEYS & SECRETS (CRITICAL - PREVENT FUTURE LEAKS)
+# =============================================================================
+.env
+.env.*
+!.env.example
+config/keys.js
+src/config/api-keys.js
+src/config/secrets.js
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+keys/
+
+# =============================================================================
+# BUILD CACHE (WHERE YOUR API KEY WAS EXPOSED)
+# =============================================================================
+.cache/
+.parcel-cache/
+node_modules/.cache/
+.next/cache/
+.nuxt/cache/
+build/cache/
+dist/cache/
+
+# =============================================================================
+# NODE.JS & NPM
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.yarn-integrity
+package-lock.json.backup
+yarn.lock.backup
+
+# =============================================================================
+# BUILD OUTPUT
+# =============================================================================
+build/
+dist/
+out/
+.next/
+.nuxt/
+
+# =============================================================================
+# DEVELOPMENT & TESTING
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+coverage/
+*.lcov
+.nyc_output
+
+# =============================================================================
+# LOGS & TEMPORARY FILES
+# =============================================================================
+logs
+*.log
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+
+# =============================================================================
+# DATABASE & RUNTIME
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+.dynamodb/
+
+# =============================================================================
+# BABEL & WEBPACK CACHE (SPECIFIC TO YOUR ISSUE)
+# =============================================================================
+node_modules/.cache/babel-loader/
+.cache/babel-loader/
+webpack-cache/
+.webpack/
+babel.cache.json
+
+# =============================================================================
+# MISC FRAMEWORK CACHES
+# =============================================================================
+.eslintcache
+.tsbuildinfo
+.fusebox/
+.tern-port
