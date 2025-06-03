@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #312626;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .App {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .auth-form input {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .auth-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(131, 39, 39);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .auth-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .google-login button {
+    padding: 10px 20px;
+    background-color: #db4437;
+    color: rgb(212, 52, 52);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .google-login button:hover {
+    background-color: #c1351d;
+  }
+  

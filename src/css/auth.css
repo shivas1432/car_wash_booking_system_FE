@@ -1,0 +1,217 @@
+/* Home Page Styling */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../images/3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  
+}
+
+.home-page h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.home-btn {
+  background-color: #6e7bff;
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.home-btn:hover {
+  background-color: #5a66d8;
+}
+
+.home-btn:active {
+  background-color: #4a56a3;
+}
+
+.home-btn:focus {
+  outline: none;
+}
+
+/* Auth Form Specific Styles */
+.auth-form-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: url('../images/3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  
+  margin: 0 auto;
+  padding: 100px;
+  
+}
+
+.auth-form {
+  background-color: rgba(255, 255, 255, 0.404);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  max-width: 500px;
+}
+
+.auth-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.auth-form .login-form,
+.auth-form .register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form .auth-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+.auth-form .auth-input:focus {
+  border-color: #6e7bff;
+  outline: none;
+}
+
+.auth-form .auth-btn {
+  background-color: #6e7bff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-form .auth-btn:hover {
+  background-color: #5a66d8;
+}
+
+.auth-form .forgot-password-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.auth-form .forgot-password-link a {
+  color: #6e7bff;
+  text-decoration: none;
+}
+
+.auth-form .forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+.auth-form .google-login {
+  margin-top: 20px;
+}
+
+.auth-form .error-message {
+  color: rgb(233, 23, 23);
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .auth-form-container {
+    padding: 15px;
+  }
+
+  .auth-form h2 {
+    font-size: 24px;
+  }
+
+  .auth-form .auth-input {
+    font-size: 14px;
+  }
+
+  .auth-form .auth-btn {
+    font-size: 14px;
+  }
+}.google-login1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.google-btn1 {
+  background: rgba(255, 255, 255, 0.2);
+  color: #4285f4;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.google-btn1::before {
+  content: '';
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.google-btn1 p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #191a1d;
+}
+
+.google-btn1:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 40px rgba(66, 133, 244, 0.3);
+}

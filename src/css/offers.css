@@ -1,0 +1,180 @@
+/* Offers.css */
+.offers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .offers-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .offers-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .offers-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .coming-soon-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .coming-soon-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #2196f3;
+  }
+  
+  .offer-icon {
+    display: inline-block;
+    background-color: #e3f2fd;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    font-style: normal;
+  }
+  
+  .coming-soon-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .coming-soon-container p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .newsletter-signup {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-signup h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .newsletter-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+  }
+  
+  .newsletter-button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+  
+  .newsletter-button:hover {
+    background-color: #1976d2;
+  }
+  
+  .why-choose-us {
+    margin-top: 60px;
+  }
+  
+  .why-choose-us h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .benefit-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .benefit-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .offers-header h1 {
+      font-size: 2rem;
+    }
+    
+    .coming-soon-container {
+      padding: 30px 20px;
+    }
+    
+    .newsletter-form {
+      flex-direction: column;
+    }
+    
+    .newsletter-input {
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    
+    .newsletter-button {
+      border-radius: 4px;
+      padding: 12px;
+    }
+    
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }

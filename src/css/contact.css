@@ -1,0 +1,529 @@
+/* ContactHelp.css */
+.contact-help-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    color: white;
+    min-height: 100vh;
+    padding: 10px;
+   
+  }
+
+  .top-section {
+    padding: 2rem 1.5rem;
+    background-color: #0c293d;
+    
+  }
+  
+  .banner-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .banner-content p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .stat-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    background-color: #0c293d;
+    padding: 0 1rem;
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+  }
+  
+  .tabs button.active {
+    opacity: 1;
+  }
+  
+  .tabs button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #55b9f3;
+  }
+  
+  /* Contact Card */
+  .contact-card {
+   
+    background-color: #143c56;
+    border-radius: 12px;
+    margin: 1rem;
+    overflow: hidden;
+  }
+  .image-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .contact-info {
+    padding: 1.5rem;
+    
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 0.3rem;
+  }
+  
+  .contact-info > p {
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+   
+  }
+  
+  .contact-methods {
+    margin-bottom: 1.5rem;
+    
+  }
+  .contact-methods .method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+   
+  }
+  
+  .contact-methods .method .method-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .contact-methods .method .method-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .contact-methods .method .method-details h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .contact-methods .method .method-details p {
+    margin: 5px 0;
+    font-size: 0.875rem;
+    margin-right: 40px;
+  }
+  
+  .contact-methods .method .expand-icon {
+    font-size: 1rem;
+   
+    color: #007bff;  
+  }
+  .contact-methods .expand-icon {
+    display: flex;
+    gap: 20px;
+    
+  }
+  .expand-icon  {
+    display: flex;
+    flex-direction: column; /* Makes the items stack vertically */
+    
+  }
+  .contact-methods .expand-icon a{
+    cursor: pointer;
+    z-index: 4;
+  }
+  
+  .whatsapp-btn,
+  .messenger-btn {
+    text-decoration: none;
+    background-color: #25d366; /* WhatsApp green color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .messenger-btn {
+    background-color: #0078ff; /* Messenger blue color */
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #128c7e; /* Darker green for WhatsApp on hover */
+  }
+  
+  .messenger-btn:hover {
+    background-color: #0058a3; /* Darker blue for Messenger on hover */
+  }
+  
+  
+  .contact-methods .expand-icon a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    background-color: #2b3b4bdd;
+  }
+
+  
+  .contact-methods .expand-icon a:hover {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    
+   
+  }
+  
+  .btn-outline,
+  .btn-filled {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+   
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-outline:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-filled {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-filled:hover {
+    background-color: #45a049;
+  }
+  
+  .method {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .method-icon {
+    margin-right: 1rem;
+  }
+  
+  .method-details {
+    flex-grow: 1;
+  
+  }
+  
+  .method-details h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+  }
+  
+  .method-details p {
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+  
+  .expand-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* AI Help Section */
+.help-section {
+  padding: 1rem;
+}
+
+.ai-card {
+  background-color: #143c56;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-card h2 {
+  margin-bottom: 0.3rem;
+}
+
+.ai-card > p {
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.ai-chat {
+  background-color: rgba(12, 41, 61, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+  max-height: 400px;
+  overflow-y: auto; /* Makes sure it scrolls when there is a lot of content */
+}
+
+.ai-message {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.ai-icon {
+  margin-right: 0.8rem;
+}
+
+.ai-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-bubble {
+  background-color: #0c293d;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 80%;
+}
+
+.message-bubble p {
+  margin-bottom: 0.5rem;
+}
+
+.time {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-area input {
+  flex-grow: 1;
+  padding: 0.8rem;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.send-button {
+  background-color: #55b9f3;
+  border: none;
+  border-radius: 20px;
+  padding: 0 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #2f87b7;
+}
+
+.ai-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-option {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.ai-option h4 {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.ai-option p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+  
+  .input-area {
+    display: flex;
+    gap: 0.5rem;
+   
+  }
+  
+  .input-area input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .send-button {
+   
+    background-color: #55b9f3;
+    border: none;
+    border-radius: 20px;
+    padding: 0 1rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    background-color: #143c56;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 600px;
+  }
+  
+  .faq-section h3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-item {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .faq-question {
+    display: flex;
+    align-items: center;
+  }
+  
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Footer */
+  .footer-help {
+    padding: 1.5rem;
+  }
+  
+  .footer-help h3 {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+  
+  .wealth-options .option-button {
+    width: 100%;
+    background-color: #f5a963;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ 
+  @media (min-width: 768px) {
+    .contact-help-container {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    
+    .contact-section, .help-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .contact-help-container {
+      max-width: 992px;
+    }
+    
+    .contact-section {
+      grid-template-columns: 1fr;
+    }
+    
+    .help-section {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 550px) {
+    .contact-help-container {
+      max-width: 992px;
+    }
+    
+    .contact-section {
+      grid-template-columns: 1fr;
+    }
+    
+    .help-section {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

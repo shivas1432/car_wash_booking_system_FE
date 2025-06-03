@@ -1,0 +1,707 @@
+/* Include your existing styles here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fc;
+    color: #333;
+    overflow-x: hidden;
+    margin-top: 60px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(5, 23, 50, 0.95);
+    padding: 1rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+   
+}
+
+.nav-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 1300px;
+ 
+}
+.navbar-button{
+color: white;
+   background: transparent;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-inner-circle {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+  
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.nav-links a:hover, .nav-links a.current {
+    opacity: 1;
+}
+
+/* User Icon Styling */
+.user-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #efededd6;
+  }
+  
+  .user-icon svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Space between the icon and text */
+  }
+  .time-display {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .time-display h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .time-display p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+ 
+  
+  .user-icon span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .user-icon:hover span {
+    color: #3498db; /* Change text color on hover */
+  }
+  
+  /* Mobile Menu Toggle Styling */
+  .menu-toggle {
+    display: none; /* Hidden by default, will show on smaller screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+  }
+  
+  .menu-toggle span {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+  
+  /* Show menu toggle on mobile, hide the user icon */
+  @media (max-width: 768px) {
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    /* Keep the user icon visible on mobile */
+    .user-icon {
+      display: flex; /* Ensure it's visible */
+    }
+  
+    .menu-toggle {
+      display: flex; /* Show the menu toggle button on mobile */
+    }
+  }
+  
+  
+
+/* Hero Section */
+.hero {
+    background-color: #051732;
+    color: white;
+    position: relative;
+    padding-top: 80px;
+    overflow: hidden;
+    min-height: 550px;
+    max-width: 1300;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #051732;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    transform: scaleX(1.5);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem 8rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 500px; 
+}
+
+.hero-tag {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.hero-car {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    width: 45%;
+    max-width: 750px;
+    z-index: 3;
+}
+
+.hero-book-now {
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    background-color: #3498db;
+    color: white;
+   
+}
+
+/* Features Section */
+.features {
+    padding: 8rem 2rem 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051732;
+}
+
+.feature-text {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 3rem;
+}
+
+.feature-tag {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feature-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #f7e9e9;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.feature-image-container {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.feature-image {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-image img {
+    width: 100%;  
+    display: block;
+}
+
+.feature-buttons {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #3498db;
+    padding: 0.8rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.feature-button {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.feature-button i {
+    margin-right: 8px;
+}
+
+.button-divider {
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 0.5rem;
+}
+
+/* Smart Control Section */
+.smart-control {
+    padding: 5rem 0;
+    max-width: 1200px;
+    margin: 4rem auto;
+    display: flex;
+    align-items: center;
+    background-color: #051732;
+}
+
+.smart-device-container {
+    flex: 1;
+    padding: 2rem;
+    position: relative;
+}
+
+.smart-device-img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+}
+
+.smart-control-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.smart-control-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.smart-control-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.share-button i {
+    margin-right: 5px;
+    color: #3498db;
+}
+
+/* Footer */
+footer {
+    background-color: #051732;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-dots {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.footer-dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.footer-dot.active {
+    background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-content {
+        padding: o;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-text {
+        max-width: 500px; 
+    }
+
+    .hero-car {
+        width: 40%;
+    }
+
+    .feature-text h2,
+    .smart-control-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        background-color: #051732;
+        color: white;
+        position: relative;
+        padding-top: 80px;
+        overflow: hidden;
+        min-height: 250px;
+    }
+    .hero-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: start;
+    }
+
+    .hero-text {
+        max-width: 350px; 
+    }
+
+    .hero-car {
+        position: relative;
+        width: 60%;
+        right: auto;
+        bottom: auto;
+    }
+
+    .features,
+    .smart-control {
+        flex-direction: column;
+    }
+
+    .feature-text,
+    .smart-control-content {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .cards-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: rgba(5, 23, 50, 0.95);
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.8rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero-text {
+        max-width: 200px; 
+    }
+    .hero-car{
+       max-width: 60%;
+    }
+    .feature-text h2,
+    .service-intro h2,
+    .smart-control-content h2 {
+        font-size: 2rem;
+    }
+
+    .feature-buttons {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .button-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0.5rem 0;
+    }
+
+    .service-intro,
+    .service-cards-grid {
+        min-width: 100%;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .features,
+    .smart-control,
+    .service-cards {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.1rem;
+    }
+    .hero-text {
+        max-width: 150px; 
+        
+    }
+    .hero p {
+        font-size: .8rem;
+        margin-bottom: 2rem;
+        opacity: 0.7;
+        line-height: 1.6;
+    }
+    .hero-car{
+        max-width: 80%;
+     }
+
+    .book-now-btn,
+    .hero-book-now {
+        width: 30%;
+        text-align: center;
+    }
+
+    .feature-text h2,
+    .service-intro h2,
+    .smart-control-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature-buttons {
+        position: relative;
+        margin-top: 1.5rem;
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+    .hero {
+        background-color: #051732;
+        color: white;
+        position: relative;
+        padding-top: 80px;
+        overflow: hidden;
+        min-height: 250px;
+    }
+   
+}
+@media (max-width: 440px) {
+    
+    .features,
+    .smart-control,
+    .service-cards {
+        padding: 3rem 1rem;
+    }
+    .hero-content{
+      height: 400px;
+    }
+    .hero h1 {
+        font-size: 1rem;
+    }
+    .hero-text {
+        max-width: 100px; 
+        font-size: small;
+        
+    }
+    .hero p {
+        font-size: .6rem;
+      
+    }
+    .hero-car{
+        width: 65%;
+        
+    }
+    .book-now-btn{
+        width: 40%;
+        text-align: center;
+    }
+    .hero-book-now{
+      font-size: small;
+      padding: 10%;
+    }
+
+    .feature-text h2,
+    .service-intro h2,
+    .smart-control-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature-buttons {
+        position: relative;
+        margin-top: 1.5rem;
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+   
+}
+
+/* Background elements */
+.bg-blue-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(52, 152, 219, 0.3) 0%, rgba(52, 152, 219, 0) 70%);
+    z-index: 1;
+}
+
+.bg-light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 70%);
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-light-1 {
+    top: 100px;
+    right: 15%;
+}
+
+.bg-light-2 {
+    top: 150px;
+    right: 35%;
+}
+
+.bg-light-3 {
+    top: 80px;
+    right: 55%;
+    width: 120px;
+    height: 120px;
+}
+

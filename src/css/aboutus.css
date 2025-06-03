@@ -1,0 +1,466 @@
+/* General Styles */
+.about-us-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+  color: #333;
+}
+
+.text-yellow {
+  color: #f9c200;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Featured Car Section */
+.featured-car {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+  color: white;
+}
+
+.featured-car-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.featured-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.car-model {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.car-model-name {
+  font-size: 1.8rem;
+  color: #f9c200;
+  margin-right: 1rem;
+}
+
+.car-rating {
+  background-color: #f9c200;
+  color: #222;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+.reviews-count {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.car-description {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.featured-car-image {
+  flex: 1;
+  max-width: 45%;
+}
+
+.featured-car-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 3rem 5rem;
+  background-color: #f8f9fa;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-tags {
+  display: flex;
+  padding: 1rem 1rem 0.5rem;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.course-title {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  min-height: 80px;
+}
+
+.course-price {
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  display: flex;
+  color: #f9c200;
+  margin-right: 0.5rem;
+}
+
+.star {
+  font-size: 1rem;
+}
+
+.star.half {
+  position: relative;
+  display: inline-block;
+}
+
+.star.half:after {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f9c200;
+}
+
+.star.half:before {
+  content: "★";
+  color: #ddd;
+}
+
+.rating-count {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.course-action {
+  padding: 0 1rem 1rem;
+  margin-top: auto;
+}
+
+.enroll-btn {
+  background-color: #f9c200;
+  color: #222;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.enroll-btn:hover {
+  background-color: #e0b000;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.view-all-btn {
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-all-btn:hover {
+  background-color: #222;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 5rem;
+  background-color: white;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.testimonial-image {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 1rem 0;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height:250px;
+  object-fit: cover;
+  
+}
+
+.testimonial-content {
+  padding: 1.5rem;
+}
+
+.testimonial-rating {
+  margin-bottom: 0.8rem;
+}
+
+.testimonial-course {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.testimonial-text {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.author-title {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.add-review-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.add-review-btn {
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  background-color: #f9c200;
+  color: #222;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-review-btn:hover {
+  background-color: #e0b000;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #22222259;
+  color: white;
+  padding: 3rem 5rem 1.5rem;
+  margin-bottom: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 2rem;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f9c200;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #444;
+}
+
+.copyright {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 0.5rem;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #f9c200;
+  color: #222;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .featured-car {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .featured-car-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .featured-car-image {
+    max-width: 100%;
+  }
+  
+  .course-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .courses-section,
+  .testimonials-section,
+  .footer {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}

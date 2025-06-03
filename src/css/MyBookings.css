@@ -1,0 +1,526 @@
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.my-bookings-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Professional header with smooth top edge */
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+}
+
+.bookings-header:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.02));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bookings-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.bookings-header h2:after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  border-radius: 2px;
+}
+
+.new-booking-button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #3498db;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.1);
+}
+
+.new-booking-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.2);
+}
+
+/* Refresh button styles */
+.refresh-container {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.refresh-button {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  color: #495057;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.refresh-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Booking cards */
+.bookings-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.booking-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header {
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.booking-header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Status badge with animated transition */
+.status {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.status:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  border-radius: inherit;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.booking-card:hover .status:before {
+  transform: scale(2.5);
+  opacity: 0;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.confirmed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.status.in_progress, .status.work\ started {
+  background-color: #e2f0fd;
+  color: #0d47a1;
+}
+
+.status.ready\ to\ collect {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.completed, .status.delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Booking details */
+.booking-details {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.booking-info, .booking-car-details, .booking-price, .booking-time, .booking-status-info {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.booking-info strong, .booking-car-details strong, .booking-price strong, .booking-time strong {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.booking-info p, .booking-car-details p, .booking-price p, .booking-time p {
+  margin-bottom: 0.5rem;
+}
+
+.booking-status-info {
+  grid-column: 1 / -1;
+  background-color: #e9ecef;
+  padding: 1rem;
+  border-left: 4px solid #6c757d;
+  font-style: italic;
+  color: #495057;
+}
+
+.booking-status-info p {
+  position: relative;
+  padding-left: 24px;
+}
+
+.booking-status-info p:before {
+  content: "ⓘ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #6c757d;
+  font-weight: bold;
+}
+
+/* Status-specific styling */
+.booking-card:has(.status.pending) .booking-status-info {
+  border-left-color: #856404;
+  background-color: #fff8e5;
+}
+
+.booking-card:has(.status.confirmed) .booking-status-info {
+  border-left-color: #0c5460;
+  background-color: #e8f4f8;
+}
+
+.booking-card:has(.status.in_progress) .booking-status-info,
+.booking-card:has(.status.work\ started) .booking-status-info {
+  border-left-color: #0d47a1;
+  background-color: #e8f1fd;
+}
+
+.booking-card:has(.status.ready\ to\ collect) .booking-status-info {
+  border-left-color: #155724;
+  background-color: #e8f6eb;
+}
+
+.booking-card:has(.status.completed) .booking-status-info,
+.booking-card:has(.status.delivered) .booking-status-info {
+  border-left-color: #155724;
+  background-color: #e8f6eb;
+}
+
+.booking-card:has(.status.cancelled) .booking-status-info {
+  border-left-color: #721c24;
+  background-color: #f8e8e9;
+}
+
+/* Cancel booking button */
+.booking-actions {
+  grid-column: 1 / -1;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.cancel-booking-btn {
+  background-color: #f8d7da;
+  border: none;
+  color: #dc3545;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-booking-btn:hover:not(:disabled) {
+  background-color: #f5c2c7;
+  transform: translateY(-2px);
+}
+
+.cancel-booking-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* No bookings message */
+.no-bookings {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 2px dashed #e9ecef;
+}
+
+.no-bookings p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.booking-link {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.booking-link:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Status messages */
+.booking-success, .booking-error, .booking-loading {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.booking-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.booking-loading {
+  background-color: #e2f0fd;
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+/* Animated loading indicator */
+.booking-loading:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #17a2b8;
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .my-bookings-container {
+    padding: 1.5rem;
+  }
+  
+  .bookings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .new-booking-button {
+    align-self: flex-start;
+  }
+  
+  .booking-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .bookings-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .booking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .status {
+    align-self: flex-start;
+  }
+}
+
+/* Price styling */
+.booking-price p {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.booking-price strong {
+  color: #3498db;
+}
+
+/* Date and time styling */
+.booking-time {
+  border-left: 3px solid #e9ecef;
+}
+
+/* Car details highlight */
+.booking-car-details {
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-car-details:after {
+  content: "🚗";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  opacity: 0.1;
+}
+
+/* Animated status progress for in-progress bookings */
+.booking-card:has(.status.in_progress) .booking-status-info,
+.booking-card:has(.status.work\ started) .booking-status-info {
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-card:has(.status.in_progress) .booking-status-info:after,
+.booking-card:has(.status.work\ started) .booking-status-info:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 50%;
+  background: linear-gradient(to right, transparent, #0d47a1, transparent);
+  animation: progressBar 2s ease-in-out infinite;
+}
+
+@keyframes progressBar {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight animations for card hover */
+.booking-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.booking-card:hover:after {
+  opacity: 1;
+}

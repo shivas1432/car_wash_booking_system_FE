@@ -1,0 +1,550 @@
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Professional heading with smooth top edge */
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.heading:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  border-radius: 2px;
+}
+
+/* Section styles with smooth edges */
+.form-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.form-section:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Car selection styles */
+.car-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.car-option {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.car-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-color: #d0d7de;
+}
+
+.car-option.selected {
+  border-color: #3498db;
+  background-color: #ebf5fb;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+  transform: translateY(-3px);
+}
+
+.car-option.selected:before {
+  content: '✓';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #3498db;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.car-model {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.car-plate {
+  font-weight: 500;
+  background-color: #e9ecef;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.car-color, .car-seats {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Date selection styles */
+.date-time-section {
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+}
+
+.date-selection select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #495057;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.date-selection select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Service selection styles */
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.service-option {
+  background-color: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.service-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-option.selected {
+  border-color: #3498db;
+  background-color: #ebf5fb;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.service-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.service-price {
+  font-weight: 700;
+  color: #3498db;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* Subservice selection */
+.subservice-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.subservice-button {
+  background-color: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #495057;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.subservice-button:hover {
+  background-color: #f8f9fa;
+  border-color: #d0d7de;
+}
+
+.subservice-button.selected {
+  background-color: #ebf5fb;
+  border-color: #3498db;
+  color: #2c3e50;
+}
+
+.subservice-price {
+  font-size: 0.85rem;
+  color: #3498db;
+  font-weight: 600;
+}
+
+/* Cart styles */
+.cart-content {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-name {
+  font-weight: 500;
+  color: #495057;
+}
+
+.cart-item-price {
+  font-weight: 600;
+  color: #3498db;
+}
+
+.remove-item-button {
+  background-color: #f8d7da;
+  border: none;
+  color: #dc3545;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.remove-item-button:hover {
+  background-color: #f5c2c7;
+}
+
+.total-price {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 2px solid #e9ecef;
+}
+
+/* Time slot selection */
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.time-slot-button {
+  background-color: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #495057;
+  transition: all 0.2s ease;
+  outline: none;
+  text-align: center;
+}
+
+.time-slot-button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #d0d7de;
+}
+
+.time-slot-button.selected {
+  background-color: #ebf5fb;
+  border-color: #3498db;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.time-slot-button.unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Booking summary styles */
+.booking-summary {
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.booking-summary h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.summary-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.summary-section h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3498db;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ebf5fb;
+}
+
+.summary-section p {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+.summary-section strong {
+  color: #2c3e50;
+}
+
+.booking-submit-button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-submit-button:hover:not(:disabled) {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.booking-submit-button:disabled {
+  background-color: #a3c6e7;
+  cursor: not-allowed;
+}
+
+/* Confirmation message */
+.confirmation-message {
+  background: linear-gradient(145deg, #ebf5fb, #d6eaf8);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.15);
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confirmation-message h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-message p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.confirmation-message strong {
+  color: #3498db;
+}
+
+/* Status messages */
+.booking-error, .booking-success, .booking-loading {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.booking-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.booking-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.booking-loading {
+  background-color: #e2f0fd;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+/* No cars message */
+.no-cars-message {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
+
+.no-cars-message p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.profile-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.profile-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 1.5rem;
+  }
+  
+  .form-section {
+    padding: 1.2rem;
+  }
+  
+  .summary-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-options, .car-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .time-slot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .heading {
+    font-size: 1.8rem;
+  }
+}
+
+/* Add subtle animations */
+.form-section, .car-option, .service-option, .subservice-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Selected car indicator - additional visibility */
+.selected-car-info {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #3498db;
+  font-weight: 600;
+}
+
+/* Smooth scrolling for better user experience */
+html {
+  scroll-behavior: smooth;
+}
