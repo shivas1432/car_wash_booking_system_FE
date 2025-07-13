@@ -1,6 +1,6 @@
 # Car Wash Booking App – Frontend
 
-🛠️ Still under Maintenance — Open Source Contributions Welcome!
+Still under Maintenance..................
 
 ## 🔷 Tech Stack
 
